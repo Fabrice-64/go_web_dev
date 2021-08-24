@@ -13,8 +13,7 @@ func init() {
 }
 
 func main() {
-	sages := []string{"Ghandi", "MLK", "Jesus", "Muhammad", "Buddha"}
-
+	sages := []string{"Jesus", "MLK", "Muhammad", "Buddha"}
 	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", sages)
 
 	if err != nil {

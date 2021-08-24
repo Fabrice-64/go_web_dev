@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Slice + Struct</title>
+</head>
+<body>
+    <h1>Slice and Struct</h1>
+
+    <ul>
+        {{ range .Wisdom}}
+        <li>{{.Name}} --> {{.Motto}}</li>
+        {{ end }}
+    </ul>
+
+    <ul>
+        {{ range .Automobile}}
+        <li>{{.Manufacturer}} --> {{ .Type }} --> {{ .Doors}}</li>
+        {{ end }}
+    </ul>
+
+</body>
+
+</html>

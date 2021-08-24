@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>My Slice</title>
+</head>
+
+<body>
+    <h1>Indexed Slice</h1>
+    <ul>
+        {{ range $key, $val := .}}
+        <li> {{ $key }} - {{ $val }}</li>
+        {{ end }}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions in Templates</title>
+</head>
+<body>
+    {{ range .Wisdom}}
+    {{ uc .Name}}
+    {{ end }}
+
+    {{ range .Wisdom }}
+    {{ ft .Name }}
+    {{ end }}
+
+
+</body>
+
+</html>

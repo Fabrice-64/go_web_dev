@@ -8,14 +8,21 @@ import (
 
 var tpl *template.Template
 
+type sage struct {
+	Name  string
+	Motto string
+}
+
 func init() {
 	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 
 func main() {
-	sages := []string{"Ghandi", "MLK", "Jesus", "Muhammad", "Buddha"}
-
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", sages)
+	buddha := sage{
+		Name:  "Buddha",
+		Motto: "Youpi",
+	}
+	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", buddha)
 
 	if err != nil {
 		log.Fatalln(err)

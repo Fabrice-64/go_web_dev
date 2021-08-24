@@ -13,8 +13,12 @@ func init() {
 }
 
 func main() {
-	sages := []string{"Ghandi", "MLK", "Jesus", "Muhammad", "Buddha"}
-
+	sages := map[string]string{
+		"Asia":        "Buddha",
+		"Middle East": "Jesus",
+		"Europe":      "Descartes",
+		"Africa":      "Saint Augustin",
+	}
 	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", sages)
 
 	if err != nil {
