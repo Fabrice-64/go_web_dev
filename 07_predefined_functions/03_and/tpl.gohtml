@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Predefined Funcs "and"</title>
+
+</head>
+
+<body>
+    EXEMPLE #1
+    {{ range .}}
+        {{.}}
+    {{ end }}
+
+    EXEMPLE #2
+    {{ if .}}
+       Eléments: {{ . }}
+    {{ end}}
+
+    EXEMPLE #3
+    {{ range .}}
+        {{ if .Name}}
+            {{.}}
+        {{ end }}
+    {{ end }}
+
+    EXEMPLE #4:
+    {{ range . }}
+        {{ if and .Name .Admin}}
+            EXEMPLE #4: {{.Name}} --> {{ .Motto}} --> {{.Admin}}
+        {{ end }}
+    {{ end }}
+        
+
+</body>
+
+</html>
