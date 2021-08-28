@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise-01</title>
+</head>
+
+<body>
+{{ range .}}
+    Academic Year: {{.Acayear}}<br>
+    {{.Fall.Term}}
+    {{range .Fall.Courses}}
+        {{.Name}}-->{{.Number}}
+    {{end}}
+
+        
+
+    {{.Spring.Term}}
+    {{range .Spring.Courses}}
+        {{.Name}}-->{{.Number}}
+    {{ end }}
+
+{{ end }}
+</body>
+
+</html>

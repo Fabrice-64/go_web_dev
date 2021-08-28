@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise-2</title>
+</head>
+
+<body>
+{{ range .}}
+
+    {{.Name}}
+        {{ range .Hotels }}
+        {{.Name}} --> {{.City}}-->{{.Zip}}
+        {{end}}
+    
+{{ end }}
+<body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Method in Template</title>
+</head>
+
+<body>
+<h1>{{.Name}}</h1>
+<h2>Age: {{.Age}} --> Double: {{.AgeDbl}}</h2>
+<h3>Takes Args with pipeline: {{.Age | .TakeArgs}}</h3>
+<h3>Takes Args with pipeline: {{ 10 | .TakeArgs}}</h3>
+<h3>Takes Args with pipeline: {{ .AgeDbl | .TakeArgs}}</h3>
+<h3>License to Kill</h3>
+{{ if .LicenseToKill}}
+<h4>OK pour tuer</h4>
+{{ else }}
+<h4> Non, pas d'arme</h4>
+{{ end }}
+</body>
+
+</html>
