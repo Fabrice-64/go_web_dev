@@ -1,0 +1,22 @@
+{{ template "header"}}
+
+<h1>purpose: check the encryption type multipart/form-data</h1>
+<form method="POST" enctype="multipart/form-data">
+    <label for="firstName">First Name: </label>
+    <input type="text" id="firstName" name="first">
+    <br>
+    <label for="lastName">Last Name: </label>
+    <input type="text" id="lastName" name="last">
+    <br>
+    <label for="subscribe">Subscription= </label>
+    <input type="checkbox" id="subscribe" name="sub">
+    <br>
+    <input type="submit">
+</form>
+
+{{ if .}}
+<h1>Outcome: {{.}}</h1>
+{{ end }}
+
+{{ template "footer" }}
+

@@ -1,0 +1,22 @@
+{{ template "header"}}
+
+<h1>Test encryption type using text-plain</h1>
+<form method="POST" enctype="text/plain">
+    <label for="firstName">First Name: </label>
+    <input type="text" id="firstName" name="first">
+    <br>
+    <label for="lastName">Last Name: </label>
+    <input type="text" id="lastName" name="last">
+    <br>
+    <label for="subscribe">Subscribe: </label>
+    <input type="checkbox" id="subscribe" name="sub">
+    <br>
+    <input type="submit" value="Valider">
+    <br>
+</form>
+
+{{ if .}}
+    <h1>Outcome: {{.}}</h1>
+{{ end }}
+
+{{ template "footer"}}
