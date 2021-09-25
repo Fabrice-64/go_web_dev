@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+
+<body>
+    <h1> This is the INDEX Page</h1>
+
+    {{if .First}}
+    <h3>User Name: {{.UserName}}</h3>
+    <h4>First Name: {{.First}}</h4>
+    <h4>Last Name: {{.Last}}</h4>
+
+    {{ else}}
+    <h2><a href="/signup">Please Signup</a><br></h2>
+    {{ end }}
+
+    <br>
+    <h2>Go to the <a href="/bar">BAR</a></h2>
+
+</body>
+</html>
+

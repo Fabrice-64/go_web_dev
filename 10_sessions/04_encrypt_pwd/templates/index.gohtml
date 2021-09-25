@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+
+<body>
+<h1>Vous êtes sur la Page Index</h1>
+{{ if .First}}
+    <h3>USER NAME: <strong>{{.UserName}}</strong></h3>
+    <h3>PASSWORD: <strong>{{.Password}}</strong></h3>
+    <h3>FIRST NAME: <strong>{{.First}}</strong></h3>
+    <h3>LAST NAME: <strong>{{.Last}}</strong></h3>
+{{ else }}
+    <h3>Vous ne semblez pas être identifié</h3>
+    <h3><a href="/signup">Page Sign Up</a></h3>
+{{ end }}
+
+<br>
+<h3> Go to <a href="/bar">Bar</a></h3>
+</body>
+
+</html>
+

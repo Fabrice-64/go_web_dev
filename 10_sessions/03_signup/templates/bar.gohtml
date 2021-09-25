@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>BAR</title>
+</head>
+
+<body>
+    <h1>This is the Bar Page</h1>
+    {{ if .First}}
+        <h2>Welcome at the Bar {{.First}}</h2>
+        <h3>User Name: {{.UserName}}</h3>
+        <h3>First Name: {{.First}}</h3>
+        <h3>Last Name: {{.Last}}</h3>
+    {{ end }}
+
+</body>
+</html>
