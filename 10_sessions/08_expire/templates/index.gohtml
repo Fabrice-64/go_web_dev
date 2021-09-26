@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+
+<body>
+    <h1>Index Page</h1>
+    {{if .First}}
+    USER NAME: {{.UserName}}<br>
+    PASSWORD: {{.Password}}<br>
+    FIRST NAME: {{.First}}<br>
+    LAST NAME: {{.Last}}<br>
+    ROLE: {{.Role}}<br>
+    <h2><a href="/logout">Click to :<strong>Logout</strong></a></h2>
+    {{else}}
+    <h2><a href="/signup">Go to <strong>Signup</strong></a></h2>
+    <h2><a href="/login">Go to <strong>login</strong></a></h2>
+    {{ end }}
+<br>
+<h2>Go to <strong><a href="/bar">Bar</a></strong></h2>
+
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>BAR</title>
+</head>
+
+<body>
+    <h1>Welcome to the Bar</h1>
+
+    {{ if .First}}
+    <h3>User Name: <i>{{.UserName}}</i></h3>
+    <h3>Password: <i>{{.Password}}</i></h3>
+    <h3>First Name: <i>{{.First}}</i></h3>
+    <h3>Last Name: <i>{{.Last}}</i></h3>
+    <h4>To Leave the Bar: <a href="/logout">Logout</a></h4>
+    {{ else}}
+    <h3>You should sign up or login</h3>
+    {{ end}}
+
+</body>
+</html>
+
+
+
