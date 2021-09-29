@@ -115,7 +115,7 @@ func logout(w http.ResponseWriter, req *http.Request) {
 	}
 	http.SetCookie(w, c)
 	//clean up sessions
-	if time.Now().Sub(dbSessionsCleaned) > (time.Second * 30) {
+	if time.Since(dbSessionsCleaned) > (time.Second * 30) {
 		go cleanSessions()
 	}
 	http.Redirect(w, req, "/login", http.StatusSeeOther)
