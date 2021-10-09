@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+
+<body>
+    <h1>Session Storage</h1>
+    <p><strong>Please Have a Look in the Navigator - Inspector</strong></p>
+
+    <script>
+        sessionStorage.setItem("preferredCar", "Volvo");
+        var car = sessionStorage.getItem("preferredCar");
+        console.log(car)
+        //sessionStorage.removeItem("preferredCar");
+        var car = sessionStorage.getItem("preferredCar");
+        console.log(car)
+        <!--Close the browser window to check it.-->
+    </script>
+</body>
+</html>

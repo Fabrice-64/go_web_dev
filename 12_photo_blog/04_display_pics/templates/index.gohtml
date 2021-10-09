@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+
+<body>
+    <h1>These are your pictures:</h1>
+    {{ range .}}
+    <img src="public/pics/{{.}}" width="400px">
+    {{ end }}
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="nf">
+        <input type="submit" value="Valider">
+    </form>
+
+    </body>
+    </html>
