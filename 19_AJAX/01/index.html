@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size:5vw;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<!--Ne fonctionne pas en direct en raison des restrictions CORS des navigateurs-->
+<body>
+    <h1 onclick="makeRequest()">Make a Request</h1>
+    <script>
+        document.querySelector('h1').onclick = makeRequest;
+        function makeRequest(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'data.txt');
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                    alert("Test");
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
